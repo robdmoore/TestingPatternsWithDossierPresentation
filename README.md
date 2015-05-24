@@ -1,6 +1,8 @@
 Applying useful testing patterns using TestStack.Dossier
 ========================================================
 
+[Download PowerPoint](https://github.com/robdmoore/TestingPatternsWithDossierPresentation/raw/master/Presentation.pptx)
+
 Title
 -----
 Applying useful testing patterns using [TestStack.Dossier](https://github.com/TestStack/TestStack.Dossier)
