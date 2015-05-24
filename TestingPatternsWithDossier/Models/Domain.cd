@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="TestingPatternsWithDossier.Models.Campaign">
+    <Position X="5.5" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAkAAAAAEAAAAAAAEAAAAA=</HashCode>
+      <FileName>Models\Campaign.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Demographic" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="TestingPatternsWithDossier.Models.Demographic">
+    <Position X="8.5" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAACAAAAAAAAAAAAAAAAAAgAgAAAAAAABAAQAAA=</HashCode>
+      <FileName>Models\Demographic.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="State" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="TestingPatternsWithDossier.Models.Member">
+    <Position X="11.5" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAABAAAAAAAAAAAQACAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>Models\Member.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="State" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="TestingPatternsWithDossier.Models.Product">
+    <Position X="2.5" Y="1.25" Width="1.5" />
+    <Members>
+      <Field Name="_campaigns" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAIAAAAAAAAAAAAAAQAAAEAABAAAAAAAAQAAAA=</HashCode>
+      <FileName>Models\Product.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="_campaigns" />
+      <Property Name="LatestCampaign" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Property Name="Campaigns" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Enum Name="TestingPatternsWithDossier.Models.CampaignStatus" Collapsed="true">
+    <Position X="17" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAAAAAAAAAAAEAAAAAAAAAAAAAAAAIAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Campaign.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="TestingPatternsWithDossier.Models.State">
+    <Position X="11.5" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAABgBAAAAIAAAAAAAACBAACAAAAAAAAAAEA=</HashCode>
+      <FileName>Models\State.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
