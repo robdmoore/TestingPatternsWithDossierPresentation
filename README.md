@@ -3,7 +3,7 @@ Applying useful testing patterns using TestStack.Dossier
 
 Title
 -----
-Applying useful testing patterns using TestStack.Dossier
+Applying useful testing patterns using [TestStack.Dossier](https://github.com/TestStack/TestStack.Dossier)
 
 Description
 -----------
