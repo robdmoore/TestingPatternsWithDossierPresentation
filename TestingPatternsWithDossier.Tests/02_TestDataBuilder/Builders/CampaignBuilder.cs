@@ -10,9 +10,9 @@ namespace TestingPatternsWithDossier.Tests._02_TestDataBuilder.Builders
 
         public CampaignBuilder()
         {
-            _demographic.ForAllMembers();
-            Set(x => x.StartDate, new DateTime(2000, 1, 1));
-            Set(x => x.EndDate, new DateTime(2000, 1, 2));
+            ForAllMembers();
+            StartingAt(new DateTime(2000, 1, 1));
+            EndingAt(new DateTime(2000, 1, 2));
         }
 
         public virtual CampaignBuilder ForAllMembers()
@@ -41,14 +41,12 @@ namespace TestingPatternsWithDossier.Tests._02_TestDataBuilder.Builders
 
         public virtual CampaignBuilder StartingAt(DateTime startDate)
         {
-            Set(x => x.StartDate, startDate);
-            return this;
+            return Set(x => x.StartDate, startDate);
         }
 
         public virtual CampaignBuilder EndingAt(DateTime endDate)
         {
-            Set(x => x.EndDate, endDate);
-            return this;
+            return Set(x => x.EndDate, endDate);
         }
 
         protected override Campaign BuildObject()

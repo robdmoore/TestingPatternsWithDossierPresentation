@@ -8,32 +8,22 @@ namespace TestingPatternsWithDossier.Tests._02_TestDataBuilder.Builders
     {
         public MemberBuilder()
         {
-            Set(x => x.Name, "Fred");
-            Set(x => x.State, State.Wa);
-            Set(x => x.Dob, new DateTime(1970, 1, 1));
+            WithDateOfBirth(new DateTime(1970, 1, 1));
         }
 
         public virtual MemberBuilder InState(State state)
         {
-            Set(x => x.State, state);
-            return this;
+            return Set(x => x.State, state);
         }
 
         public virtual MemberBuilder WithDateOfBirth(DateTime dob)
         {
-            Set(x => x.Dob, dob);
-            return this;
+            return Set(x => x.Dob, dob);
         }
 
         public virtual MemberBuilder WithAge(int age, DateTime now)
         {
-            Set(x => x.Dob, now.AddYears(-age));
-            return this;
-        }
-
-        protected override Member BuildObject()
-        {
-            return new Member(Get(x => x.Name), Get(x => x.State), Get(x => x.Dob));
+            return Set(x => x.Dob, now.AddYears(-age));
         }
     }
 }

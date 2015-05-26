@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using TestingPatternsWithDossier.Models;
 using TestStack.Dossier;
+using TestStack.Dossier.Factories;
 
 namespace TestingPatternsWithDossier.Tests._02_TestDataBuilder.Builders
 {
@@ -9,15 +10,9 @@ namespace TestingPatternsWithDossier.Tests._02_TestDataBuilder.Builders
     {
         List<Tuple<DateTime, Campaign>> _campaigns = new List<Tuple<DateTime, Campaign>>();
 
-        public ProductBuilder()
-        {
-            Set(x => x.Name, "A product");
-        }
-
         public virtual ProductBuilder WithName(string name)
         {
-            Set(x => x.Name, name);
-            return this;
+            return Set(x => x.Name, name);
         }
 
         public virtual ProductBuilder WithNoCampaigns()
@@ -26,15 +21,16 @@ namespace TestingPatternsWithDossier.Tests._02_TestDataBuilder.Builders
             return this;
         }
 
-        public virtual ProductBuilder WithCampaign(DateTime now, CampaignBuilder campaign)
+        public virtual ProductBuilder WithCampaign(DateTime now, Func<CampaignBuilder, CampaignBuilder> modifier = null)
         {
-            _campaigns.Add(Tuple.Create(now, campaign.Build()));
+            var c = GetChildBuilder<Campaign, CampaignBuilder>(modifier).Build();
+            _campaigns.Add(Tuple.Create(now, c));
             return this;
         }
 
         protected override Product BuildObject()
         {
-            var product = new Product(Get(x => x.Name));
+            var product = BuildUsing<CallConstructorFactory>();
 
             foreach (var campaign in _campaigns)
                 product.CreateCampaign(

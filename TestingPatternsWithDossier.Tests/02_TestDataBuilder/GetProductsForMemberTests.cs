@@ -18,13 +18,12 @@ namespace TestingPatternsWithDossier.Tests._02_TestDataBuilder
         public void GivenProductsWithNoCampaignOrACampaignThatIsntCurrent_WhenQuerying_ThenReturnNoResults()
         {
             var products = ProductBuilder.CreateListOfSize(3)
-                .TheFirst(1).With(b => b.WithNoCampaigns())
-                .TheNext(1).With(b => b.WithCampaign(_now, new CampaignBuilder()
-                    .StartingAt(_now.AddDays(1)).EndingAt(_now.AddDays(2))
-                ))
-                .TheNext(1).With(b => b.WithCampaign(_now, new CampaignBuilder()
-                    .StartingAt(_now.AddDays(-2)).EndingAt(_now.AddDays(-1))
-                ))
+                .TheFirst(1)
+                    .WithNoCampaigns()
+                .TheNext(1)
+                    .WithCampaign(_now, c => c.StartingAt(_now.AddDays(1)).EndingAt(_now.AddDays(2)))
+                .TheNext(1)
+                    .WithCampaign(_now, c => c.StartingAt(_now.AddDays(-2)).EndingAt(_now.AddDays(-1)))
                 .BuildList();
             products.ToList().ForEach(p => Session.Save(p));
 
@@ -38,29 +37,30 @@ namespace TestingPatternsWithDossier.Tests._02_TestDataBuilder
         {
             var member = new MemberBuilder().InState(State.Wa).WithAge(10, _now).Build();
             var products = ProductBuilder.CreateListOfSize(3)
-                .TheFirst(1).With(b => b.WithName("1").WithCampaign(_now, new CampaignBuilder()
+                .TheFirst(1).WithCampaign(_now, x => x
                     .ForAllMembers()
                     .StartingAt(_now.AddDays(-1))
                     .EndingAt(_now.AddDays(1))
-                ))
-                .TheNext(1).With(b => b.WithName("2").WithCampaign(_now, new CampaignBuilder()
+                )
+                .TheNext(1).WithCampaign(_now, x => x
                     .ForState(State.Act)
                     .StartingAt(_now.AddDays(-1))
                     .EndingAt(_now.AddDays(1))
-                ))
-                .TheNext(1).With(b => b.WithName("3").WithCampaign(_now, new CampaignBuilder()
+                )
+                .TheNext(1).WithCampaign(_now, x => x
                     .ForState(State.Wa)
                     .WithMinimumAge(9)
                     .WithMaximumAge(11)
                     .StartingAt(_now.AddDays(-1))
                     .EndingAt(_now.AddDays(1))
-                ))
+                )
                 .BuildList();
             products.ToList().ForEach(p => Session.Save(p));
 
             var result = Execute(new GetProductsForMember(_now, member));
 
-            Assert.That(result.Select(p => p.Name).ToArray(), Is.EqualTo(new[]{products[0].Name, products[2].Name}));
+            Assert.That(result.Select(p => p.Name).ToArray(),
+                Is.EqualTo(new[]{products[0].Name, products[2].Name}));
         }
     }
 }

@@ -20,25 +20,17 @@ namespace TestingPatternsWithDossier.Tests._02_TestDataBuilder.Builders
 
         public virtual DemographicBuilder ForState(State state)
         {
-            Set(x => x.State, state);
-            return this;
+            return Set(x => x.State, state);
         }
 
         public virtual DemographicBuilder WithMinimumAge(int minimumAge)
         {
-            Set(x => x.MinimumAge, minimumAge);
-            return this;
+            return Set(x => x.MinimumAge, minimumAge);
         }
 
         public virtual DemographicBuilder WithMaximumAge(int maximumAge)
         {
-            Set(x => x.MaximumAge, maximumAge);
-            return this;
-        }
-
-        protected override Demographic BuildObject()
-        {
-            return new Demographic(Get(x => x.State), Get(x => x.MinimumAge), Get(x => x.MaximumAge));
+            return Set(x => x.MaximumAge, maximumAge);
         }
     }
 }
