@@ -17,7 +17,7 @@ namespace TestingPatternsWithDossier.Models
 
         public string Name { get; protected set; }
         public Campaign LatestCampaign { get; set; }
-        public IEnumerable<Campaign> Campaigns { get; protected set; }
+        public IEnumerable<Campaign> Campaigns { get { return _campaigns; } }
 
         public virtual void CreateCampaign(DateTime now, Demographic demographic, DateTime start, DateTime end)
         {
