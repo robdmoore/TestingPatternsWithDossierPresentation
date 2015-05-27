@@ -4,7 +4,7 @@ using NUnit.Framework;
 using TestingPatternsWithDossier.Models;
 using TestingPatternsWithDossier.Queries;
 using TestingPatternsWithDossier.Tests.TestHelpers;
-using TestingPatternsWithDossier.Tests._03_TestDataBuilderMother.Builders;
+using TestingPatternsWithDossier.Tests._02_TestDataBuilder.Builders;
 using TestingPatternsWithDossier.Tests._03_TestDataBuilderMother.ObjectMothers;
 using TestStack.Dossier.Lists;
 

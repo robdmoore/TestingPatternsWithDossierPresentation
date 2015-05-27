@@ -67,10 +67,6 @@
     <Compile Include="02_TestDataBuilder\Builders\ProductBuilder.cs" />
     <Compile Include="02_TestDataBuilder\DemographicTests.cs" />
     <Compile Include="02_TestDataBuilder\GetProductsForMemberTests.cs" />
-    <Compile Include="03_TestDataBuilderMother\Builders\CampaignBuilder.cs" />
-    <Compile Include="03_TestDataBuilderMother\Builders\DemographicBuilder.cs" />
-    <Compile Include="03_TestDataBuilderMother\Builders\MemberBuilder.cs" />
-    <Compile Include="03_TestDataBuilderMother\Builders\ProductBuilder.cs" />
     <Compile Include="03_TestDataBuilderMother\DemographicTests.cs" />
     <Compile Include="03_TestDataBuilderMother\GetProductsForMemberTests.cs" />
     <Compile Include="03_TestDataBuilderMother\ObjectMothers\Campaigns.cs" />
@@ -88,6 +84,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="04_ValueGeneration\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

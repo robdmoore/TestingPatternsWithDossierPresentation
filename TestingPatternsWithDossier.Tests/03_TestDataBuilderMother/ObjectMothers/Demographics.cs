@@ -1,4 +1,4 @@
-﻿using TestingPatternsWithDossier.Tests._03_TestDataBuilderMother.Builders;
+﻿using TestingPatternsWithDossier.Tests._02_TestDataBuilder.Builders;
 
 namespace TestingPatternsWithDossier.Tests._03_TestDataBuilderMother.ObjectMothers
 {
