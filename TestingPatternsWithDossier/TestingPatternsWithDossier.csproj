@@ -39,6 +39,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Calculator.cs" />
     <Compile Include="IQuery.cs" />
     <Compile Include="ISession.cs" />
     <Compile Include="Models\Campaign.cs" />

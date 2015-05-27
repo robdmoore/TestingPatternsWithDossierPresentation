@@ -42,6 +42,9 @@
     <Reference Include="Ploeh.AutoFixture">
       <HintPath>..\packages\AutoFixture.3.20.0\lib\net40\Ploeh.AutoFixture.dll</HintPath>
     </Reference>
+    <Reference Include="Shouldly">
+      <HintPath>..\packages\Shouldly.2.4.0\lib\net40\Shouldly.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -72,6 +75,7 @@
     <Compile Include="03_TestDataBuilderMother\ObjectMothers\Campaigns.cs" />
     <Compile Include="03_TestDataBuilderMother\ObjectMothers\Demographics.cs" />
     <Compile Include="03_TestDataBuilderMother\ObjectMothers\Members.cs" />
+    <Compile Include="04_ValueGeneration\CalculatorTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TestHelpers\InMemorySession.cs" />
     <Compile Include="TestHelpers\QueryTestBase.cs" />
@@ -85,9 +89,7 @@
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="04_ValueGeneration\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
