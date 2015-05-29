@@ -5,7 +5,7 @@ using TestStack.Dossier.EquivalenceClasses;
 
 namespace TestingPatternsWithDossier.Tests._04_ValueGeneration
 {
-    public class CalculatorTests
+    public class NiceCalculatorTests
     {
         [Test]
         public void ShouldAddSinglePositiveIntegerFromInitialState()

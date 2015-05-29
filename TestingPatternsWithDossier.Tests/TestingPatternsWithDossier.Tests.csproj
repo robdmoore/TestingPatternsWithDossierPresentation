@@ -70,12 +70,14 @@
     <Compile Include="02_TestDataBuilder\Builders\ProductBuilder.cs" />
     <Compile Include="02_TestDataBuilder\DemographicTests.cs" />
     <Compile Include="02_TestDataBuilder\GetProductsForMemberTests.cs" />
+    <Compile Include="02_TestDataBuilder\NonDossierBuilders\DemographicBuilder.cs" />
     <Compile Include="03_TestDataBuilderMother\DemographicTests.cs" />
     <Compile Include="03_TestDataBuilderMother\GetProductsForMemberTests.cs" />
     <Compile Include="03_TestDataBuilderMother\ObjectMothers\Campaigns.cs" />
     <Compile Include="03_TestDataBuilderMother\ObjectMothers\Demographics.cs" />
     <Compile Include="03_TestDataBuilderMother\ObjectMothers\Members.cs" />
-    <Compile Include="04_ValueGeneration\CalculatorTests.cs" />
+    <Compile Include="04_ValueGeneration\UglyCalculatorTests.cs" />
+    <Compile Include="04_ValueGeneration\NiceCalculatorTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TestHelpers\InMemorySession.cs" />
     <Compile Include="TestHelpers\QueryTestBase.cs" />

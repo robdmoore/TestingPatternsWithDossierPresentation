@@ -21,7 +21,7 @@
     </ShowAsAssociation>
   </Class>
   <Class Name="TestingPatternsWithDossier.Models.Member">
-    <Position X="11.5" Y="4" Width="1.5" />
+    <Position X="8.5" Y="3.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAABAAAAAAAAAAAQACAAAAAAAAAAABAAAAAA=</HashCode>
       <FileName>Models\Member.cs</FileName>
@@ -48,7 +48,7 @@
     </ShowAsCollectionAssociation>
   </Class>
   <Enum Name="TestingPatternsWithDossier.Models.CampaignStatus" Collapsed="true">
-    <Position X="17" Y="0.75" Width="1.5" />
+    <Position X="5.5" Y="3.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AQAAAAAAAAAAAAEAAAAAAAAAAAAAAAAIAAAAAAAAAAA=</HashCode>
       <FileName>Models\Campaign.cs</FileName>
