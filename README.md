@@ -14,7 +14,7 @@ The Object Mother, Test Data Builder, Anonymous Variable/Value, equivalence clas
 
 This talk will explain why and where the aforementioned patterns are useful and the advantages they can bring and show examples in code using a library I recently released called TestStack.Dossier.
 
-This presentation was first delivered to the [ANZ Coders conference](http://www.anzcoders.com/) on May 29th 2015 ([video](https://www.crowdcast.io/e/anzcoders2015/15)).
+This presentation was first delivered to the [ANZ Coders conference](http://www.anzcoders.com/) on [May 29th 2015](https://www.crowdcast.io/e/anzcoders2015/15) ([video](https://www.youtube.com/watch?v=CJSK8WhSA84)).
 
 Notes
 -----
